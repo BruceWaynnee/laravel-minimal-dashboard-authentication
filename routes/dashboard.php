@@ -37,7 +37,15 @@ Route::group([
     'prefix'     => 'dashboard',
     'middleware' => 'auth',
 ], function(){
-    // dashboard home page
+    // dashboard home page routes
     Route::get('/', 'DashboardController@index')->name('dashboard');
+
+    // send message routes
+    Route::group([
+        'prefix' => 'message',
+    ], function(){
+        Route::get('/', 'MessageController@index')->name('message');
+        Route::post('/send', 'MessageController@store')->name('send-message');
+    });
 
 });

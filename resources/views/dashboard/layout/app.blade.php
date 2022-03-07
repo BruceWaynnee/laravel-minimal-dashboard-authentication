@@ -40,6 +40,9 @@
                     <!-- dashboard navbar content -->
                     @include('dashboard.partials.navbar')
 
+                    <!-- flash message -->
+                    @include('flashmessage.index')
+
                     <!-- dashboard body content -->
                     @yield('content')
 

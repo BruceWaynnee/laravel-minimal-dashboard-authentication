@@ -20,6 +20,13 @@
         <hr class="sidebar-divider">
         <!-- interface heading navbar item -->
         <div class="sidebar-heading"> Interface </div>
+        <!-- send message -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ route('message') }}">
+                <i class="fas fa-fw fa-file"></i>
+                Sending Message
+            </a>
+        </li>
         <!-- components navbar item collapse menu -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">

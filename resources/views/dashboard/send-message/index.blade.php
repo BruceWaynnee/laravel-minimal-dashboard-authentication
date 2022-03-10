@@ -4,6 +4,8 @@
 @section('title', 'Send Message')
 
 @section('content')
+<!-- google recaptchar version 3 plug-in -->
+    {!! RecaptchaV3::initJs() !!}
 <!-- BEGIN :: Message Content Wrapper -->
     <div class="message-content-wrapper container-fluid">
         <form action="{{ route('send-message') }}" method="POST" enctype="multipart/form-data">

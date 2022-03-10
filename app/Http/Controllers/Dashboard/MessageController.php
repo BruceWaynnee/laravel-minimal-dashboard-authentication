@@ -38,10 +38,11 @@ class MessageController extends Controller
     public function store(Request $request)
     {
         $details = [
-            'name'    => $request['name'],
-            'email'   => $request['email'],
-            'contact' => $request['contact'],
-            'message' => $request['message'],
+            'name'                 => $request['name'],
+            'email'                => $request['email'],
+            'contact'              => $request['contact'],
+            'message'              => $request['message'],
+            'g-recaptcha-response' => 'required|recaptchav3:register,0.5',
         ];
 
         // process sending the email
